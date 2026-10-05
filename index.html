@@ -102,24 +102,45 @@
       border: 1px solid #394451;
     }
 
-    .vip-top {
-      margin: 25px auto 0;
-      max-width: 500px;
-      padding: 18px 20px;
-      background: linear-gradient(135deg, #111c17, #121821);
-      border: 1px solid #2d6b4b;
-      border-radius: 14px;
+    /* OPÇÕES NO TOPO */
+    .top-options {
+      max-width: 700px;
+      margin: 30px auto 0;
+      display: grid;
+      gap: 14px;
     }
 
-    .vip-top p {
-      margin: 0 0 12px;
-      color: #c2ccc6;
+    .top-option {
+      background: #121821;
+      border: 1px solid #242e39;
+      border-radius: 16px;
+      padding: 22px;
+      text-align: left;
+    }
+
+    .top-option h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .top-option p {
+      color: #b9c2cc;
       font-size: 15px;
+      margin-bottom: 15px;
     }
 
-    .vip-top .button {
+    .top-option .button {
       width: 100%;
       text-align: center;
+    }
+
+    .top-option.vip {
+      background: linear-gradient(135deg, #111c17, #121821);
+      border: 1px solid #2d6b4b;
+    }
+
+    .top-option.vip h3 {
+      color: #35d07f;
     }
 
     section {
@@ -338,11 +359,11 @@
         text-align: left;
       }
 
-      .vip-top {
-        padding: 18px 16px;
+      .top-option {
+        padding: 20px;
       }
 
-      .vip-top p {
+      .top-option p {
         text-align: left;
       }
     }
@@ -377,39 +398,73 @@
           profissionais na Europa.
         </p>
 
-        <div class="buttons">
 
-          <a
-            class="button"
-            href="https://tidycal.com/isaactrucker16/mentoriagrupovip"
-            target="_blank">
-            Agendar Mentoria Completa
-          </a>
+        <!-- ORDEM: COMPLETA → EXPRESS → VIP -->
+        <div class="top-options">
 
-          <a
-            class="button secondary"
-            href="https://tidycal.com/isaactrucker16/mentoriaexpress"
-            target="_blank">
-            Mentoria Express
-          </a>
+          <!-- MENTORIA COMPLETA -->
+          <div class="top-option">
 
-        </div>
+            <h3>Mentoria Completa</h3>
 
-        <!-- GRUPO VIP NO TOPO -->
-        <div class="vip-top">
+            <p>
+              Uma conversa completa para analisar sua situação,
+              tirar dúvidas e entender melhor seus próximos passos
+              para trabalhar e viver na Europa.
+            </p>
 
-          <p>
-            🚀 <strong>Grupo VIP de Oportunidades na Europa</strong><br>
-            Acesso antecipado a oportunidades selecionadas,
-            informações e novidades.
-          </p>
+            <a
+              class="button"
+              href="https://tidycal.com/isaactrucker16/mentoriagrupovip"
+              target="_blank">
+              Agendar Mentoria Completa
+            </a>
 
-          <a
-            class="button"
-            href="https://botgram.club/mentoriaisaac"
-            target="_blank">
-            Conhecer o Grupo VIP
-          </a>
+          </div>
+
+
+          <!-- MENTORIA EXPRESS -->
+          <div class="top-option">
+
+            <h3>Mentoria Express</h3>
+
+            <p>
+              Tem uma dúvida específica? Uma conversa rápida e objetiva
+              para você obter uma orientação.
+            </p>
+
+            <a
+              class="button secondary"
+              href="https://tidycal.com/isaactrucker16/mentoriaexpress"
+              target="_blank">
+              Agendar Mentoria Express
+            </a>
+
+          </div>
+
+
+          <!-- GRUPO VIP -->
+          <div class="top-option vip">
+
+            <h3>🚀 Grupo VIP de Oportunidades na Europa</h3>
+
+            <p>
+              Tenha acesso antecipado a oportunidades selecionadas,
+              informações e novidades antes de serem divulgadas
+              publicamente.
+              <br><br>
+              ⚠️ A participação no grupo não garante vaga,
+              entrevista ou contratação.
+            </p>
+
+            <a
+              class="button"
+              href="https://botgram.club/mentoriaisaac"
+              target="_blank">
+              Conhecer o Grupo VIP
+            </a>
+
+          </div>
 
         </div>
 
@@ -422,11 +477,13 @@
       <div class="container">
 
         <div class="section-title">
+
           <h2>Por que fazer uma mentoria?</h2>
 
           <p>
             Evite perder tempo com informações desencontradas.
           </p>
+
         </div>
 
         <div class="cards">
@@ -441,6 +498,7 @@
             </p>
 
           </div>
+
 
           <div class="card">
 
@@ -464,7 +522,9 @@
       <div class="container">
 
         <div class="section-title">
+
           <h2>Como funciona</h2>
+
         </div>
 
         <div class="steps">
@@ -481,6 +541,7 @@
 
           </div>
 
+
           <div class="step">
 
             <div class="number">02</div>
@@ -492,6 +553,7 @@
             </p>
 
           </div>
+
 
           <div class="step">
 
@@ -513,6 +575,7 @@
 
     <!-- CIDADANIA EUROPEIA -->
     <section class="europe">
+
       <div class="container">
 
         <div class="section-title">
@@ -527,6 +590,7 @@
           </p>
 
         </div>
+
 
         <div class="europe-box">
 
@@ -558,6 +622,7 @@
 
           </ul>
 
+
           <div class="bonus">
 
             <h4>🎁 Bônus da Mentoria Completa para motoristas</h4>
@@ -574,16 +639,21 @@
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ESCOLHA A MENTORIA -->
     <section>
+
       <div class="container">
 
         <div class="section-title">
+
           <h2>Escolha sua mentoria</h2>
+
         </div>
+
 
         <div class="cards">
 
@@ -655,16 +725,21 @@
         </div>
 
       </div>
+
     </section>
 
 
     <!-- FAQ -->
     <section>
+
       <div class="container">
 
         <div class="section-title">
+
           <h2>Perguntas frequentes</h2>
+
         </div>
+
 
         <div class="faq">
 
@@ -742,11 +817,13 @@
         </div>
 
       </div>
+
     </section>
 
 
     <!-- CTA FINAL -->
     <section>
+
       <div class="container">
 
         <div class="section-title">
@@ -771,6 +848,7 @@
         </div>
 
       </div>
+
     </section>
 
   </main>
