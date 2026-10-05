@@ -6,13 +6,20 @@
 
   <title>Mentoria Isaac | Trabalhe na Europa</title>
 
-  <meta name="description" content="Mentoria para quem quer se preparar e encontrar oportunidades profissionais na Europa.">
+  <meta
+    name="description"
+    content="Mentoria para quem quer trabalhar, morar e organizar sua vida profissional na Europa."
+  >
 
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -27,9 +34,8 @@
     }
 
     .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
+      width: min(92%, 1100px);
+      margin: 0 auto;
     }
 
     header {
@@ -40,29 +46,40 @@
     .logo {
       font-size: 22px;
       font-weight: 800;
+      text-align: center;
     }
 
     .hero {
-      padding: 80px 0;
+      padding: 75px 0 65px;
       text-align: center;
     }
 
     .hero span {
       color: #35d07f;
       font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 1px;
     }
 
     .hero h1 {
       font-size: clamp(38px, 7vw, 68px);
-      line-height: 1.05;
-      margin: 20px 0;
+      line-height: 1.08;
+      margin: 20px auto;
+      max-width: 900px;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto 30px;
       color: #b9c2cc;
       font-size: 19px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .button {
@@ -72,7 +89,11 @@
       padding: 15px 25px;
       border-radius: 10px;
       font-weight: 800;
-      margin: 8px;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
     }
 
     .button.secondary {
@@ -92,7 +113,8 @@
 
     .section-title h2 {
       font-size: 36px;
-      margin-bottom: 10px;
+      line-height: 1.2;
+      margin-bottom: 12px;
     }
 
     .section-title p {
@@ -122,6 +144,15 @@
       margin-bottom: 20px;
     }
 
+    .card ul {
+      padding-left: 20px;
+      color: #b9c2cc;
+    }
+
+    .card li {
+      margin-bottom: 10px;
+    }
+
     .highlight {
       color: #35d07f;
       font-weight: bold;
@@ -147,6 +178,60 @@
       margin-bottom: 10px;
     }
 
+    .step p {
+      color: #b9c2cc;
+      margin-top: 8px;
+    }
+
+    .europe {
+      background: #10161e;
+    }
+
+    .europe-box {
+      max-width: 900px;
+      margin: auto;
+      background: #121821;
+      border: 1px solid #242e39;
+      border-radius: 18px;
+      padding: 35px;
+    }
+
+    .europe-box h3 {
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+
+    .europe-box p {
+      color: #b9c2cc;
+      margin-bottom: 15px;
+    }
+
+    .europe-box ul {
+      padding-left: 22px;
+      color: #b9c2cc;
+    }
+
+    .europe-box li {
+      margin-bottom: 10px;
+    }
+
+    .bonus {
+      margin-top: 22px;
+      padding: 22px;
+      border-left: 4px solid #35d07f;
+      background: #0d1411;
+      border-radius: 8px;
+    }
+
+    .bonus h4 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .bonus p {
+      margin: 0;
+    }
+
     .vip {
       background: linear-gradient(135deg, #111c17, #121821);
       border: 1px solid #2d6b4b;
@@ -157,6 +242,7 @@
 
     .vip h2 {
       font-size: 34px;
+      line-height: 1.2;
       margin-bottom: 15px;
     }
 
@@ -168,12 +254,12 @@
 
     .warning {
       font-size: 14px;
-      color: #9faab5;
-      margin-top: 20px;
+      color: #9faab5 !important;
+      margin-top: 20px !important;
     }
 
     .faq {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
     }
 
@@ -204,17 +290,70 @@
     }
 
     @media (max-width: 700px) {
+
+      .container {
+        width: 90%;
+      }
+
+      .hero {
+        padding: 55px 0 45px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+        text-align: left;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+
       .cards,
       .steps {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding: 55px 0;
+      .section-title {
+        text-align: center;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .card,
+      .step,
+      .europe-box {
+        padding: 24px;
+      }
+
+      .card p,
+      .step p,
+      .europe-box p,
+      .europe-box li,
+      details p {
+        text-align: left;
       }
 
       .vip {
         padding: 28px 20px;
+      }
+
+      .vip h2 {
+        font-size: 29px;
+      }
+
+      .vip p {
+        text-align: left;
       }
     }
   </style>
@@ -230,40 +369,47 @@
 
   <main>
 
+    <!-- HERO -->
     <section class="hero">
       <div class="container">
 
         <span>MENTORIA PROFISSIONAL</span>
 
         <h1>
-          Quer trabalhar na Europa?
+          Quer trabalhar e viver na Europa?
           <br>
           Comece pelo caminho certo.
         </h1>
 
         <p>
           Orientação prática para quem quer entender melhor o mercado,
-          se preparar e buscar oportunidades profissionais na Europa.
+          se preparar, organizar sua documentação e buscar oportunidades
+          profissionais na Europa.
         </p>
 
-        <a
-          class="button"
-          href="https://tidycal.com/isaactrucker16/mentoriagrupovip"
-          target="_blank">
-          Agendar mentoria
-        </a>
+        <div class="buttons">
 
-        <a
-          class="button secondary"
-          href="https://tidycal.com/isaactrucker16/mentoriaexpress"
-          target="_blank">
-          Mentoria Express
-        </a>
+          <a
+            class="button"
+            href="https://tidycal.com/isaactrucker16/mentoriagrupovip"
+            target="_blank">
+            Agendar Mentoria Completa
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://tidycal.com/isaactrucker16/mentoriaexpress"
+            target="_blank">
+            Mentoria Express
+          </a>
+
+        </div>
 
       </div>
     </section>
 
 
+    <!-- POR QUE FAZER -->
     <section>
       <div class="container">
 
@@ -278,17 +424,19 @@
 
           <div class="card">
             <h3>Informação prática</h3>
+
             <p>
-              Entenda melhor como funciona o mercado europeu e
-              quais caminhos podem fazer sentido para o seu objetivo.
+              Entenda melhor como funciona o mercado europeu e quais
+              caminhos podem fazer sentido para o seu objetivo.
             </p>
           </div>
 
           <div class="card">
             <h3>Direcionamento</h3>
+
             <p>
               Tire suas dúvidas e receba uma orientação mais clara
-              para tomar os próximos passos.
+              para organizar seus próximos passos.
             </p>
           </div>
 
@@ -298,6 +446,7 @@
     </section>
 
 
+    <!-- COMO FUNCIONA -->
     <section>
       <div class="container">
 
@@ -337,6 +486,67 @@
     </section>
 
 
+    <!-- CIDADANIA EUROPEIA -->
+    <section class="europe">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>A mentoria também é para quem já tem cidadania europeia</h2>
+
+          <p>
+            Quer se mudar legalmente para a Europa?
+            Eu também posso te orientar.
+          </p>
+        </div>
+
+        <div class="europe-box">
+
+          <h3>🇪🇺 Cidadania europeia e mudança para a Europa</h3>
+
+          <p>
+            Se você já possui cidadania europeia e quer morar e trabalhar
+            legalmente na Espanha, em Portugal ou em outro país da Europa,
+            a mentoria também pode te ajudar.
+          </p>
+
+          <ul>
+            <li>
+              Orientação sobre os principais documentos e procedimentos.
+            </li>
+
+            <li>
+              Direcionamento para organizar sua chegada e sua vida profissional.
+            </li>
+
+            <li>
+              Informações para quem pretende começar uma nova etapa na Europa.
+            </li>
+
+            <li>
+              Orientação de acordo com a situação e os objetivos de cada pessoa.
+            </li>
+          </ul>
+
+          <div class="bonus">
+
+            <h4>🎁 Bônus da Mentoria Completa para motoristas</h4>
+
+            <p>
+              A Mentoria Completa inclui também um conteúdo bônus para
+              motoristas sobre o processo de troca da carta de condução
+              na Europa, incluindo orientação sobre os casos em que a
+              legislação aplicável permite realizar a troca sem uma nova prova.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ESCOLHA A MENTORIA -->
     <section>
       <div class="container">
 
@@ -347,23 +557,40 @@
         <div class="cards">
 
           <div class="card">
-            <h3>Mentoria completa</h3>
+
+            <h3>Mentoria Completa</h3>
 
             <p>
               Uma conversa mais completa para analisar sua situação,
               tirar dúvidas e entender melhor seus próximos passos.
             </p>
 
+            <ul>
+              <li>Orientação personalizada.</li>
+              <li>Mercado de trabalho na Europa.</li>
+              <li>Documentação e próximos passos.</li>
+              <li>Orientação para quem possui cidadania europeia.</li>
+              <li>
+                <span class="highlight">
+                  Bônus para motoristas sobre troca da carta.
+                </span>
+              </li>
+            </ul>
+
+            <br>
+
             <a
               class="button"
               href="https://tidycal.com/isaactrucker16/mentoriagrupovip"
               target="_blank">
-              Agendar
+              Agendar Mentoria Completa
             </a>
+
           </div>
 
 
           <div class="card">
+
             <h3>Mentoria Express</h3>
 
             <p>
@@ -377,6 +604,7 @@
               target="_blank">
               Agendar Express
             </a>
+
           </div>
 
         </div>
@@ -385,6 +613,7 @@
     </section>
 
 
+    <!-- GRUPO VIP -->
     <section>
       <div class="container">
 
@@ -414,6 +643,7 @@
     </section>
 
 
+    <!-- FAQ -->
     <section>
       <div class="container">
 
@@ -425,22 +655,55 @@
 
           <details>
             <summary>A mentoria garante emprego?</summary>
+
             <p>
               Não. A mentoria oferece orientação e informação.
               Nenhuma contratação é garantida.
             </p>
           </details>
 
+
           <details>
-            <summary>Posso tirar dúvidas sobre trabalhar na Europa?</summary>
+            <summary>
+              A mentoria também serve para quem já tem cidadania europeia?
+            </summary>
+
             <p>
-              Sim. A mentoria é justamente para conversar sobre sua situação,
-              seus objetivos e suas dúvidas.
+              Sim. A mentoria também é para quem possui cidadania europeia
+              e quer se organizar para morar e trabalhar legalmente na
+              Espanha, Portugal ou outro país da Europa.
             </p>
           </details>
 
+
+          <details>
+            <summary>
+              Posso tirar dúvidas sobre documentação?
+            </summary>
+
+            <p>
+              Sim. A mentoria pode orientar sobre os principais documentos,
+              procedimentos e próximos passos de acordo com a situação de cada pessoa.
+            </p>
+          </details>
+
+
+          <details>
+            <summary>
+              O bônus da carta é para todos?
+            </summary>
+
+            <p>
+              O bônus sobre troca da carta de condução é voltado para
+              motoristas dentro da Mentoria Completa e depende das regras
+              aplicáveis ao país, à carta de origem e à situação do motorista.
+            </p>
+          </details>
+
+
           <details>
             <summary>O Grupo VIP garante uma oportunidade?</summary>
+
             <p>
               Não. O grupo oferece acesso antecipado a oportunidades
               selecionadas, mas não garante vaga, entrevista ou contratação.
@@ -453,6 +716,7 @@
     </section>
 
 
+    <!-- CTA FINAL -->
     <section>
       <div class="container">
 
@@ -470,7 +734,7 @@
             class="button"
             href="https://tidycal.com/isaactrucker16/mentoriagrupovip"
             target="_blank">
-            Quero fazer a mentoria
+            Quero fazer a Mentoria
           </a>
 
         </div>
